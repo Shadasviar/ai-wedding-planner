@@ -658,8 +658,8 @@ async authorize(credentials) {
 
 #### Automated
 
-- [x] 4.1 TypeScript compiles: `npm run build`
-- [x] 4.2 No ESLint errors: `npm run lint`
+- [x] 4.1 TypeScript compiles: `npm run build` — 1d2ca1b
+- [x] 4.2 No ESLint errors: `npm run lint` — 1d2ca1b
 
 #### Manual
 
@@ -671,7 +671,7 @@ async authorize(credentials) {
 
 #### Automated
 
-- [ ] 5.1 TypeScript compiles: `npm run build`
+- [x] 5.1 TypeScript compiles: `npm run build`
 
 #### Manual
 
