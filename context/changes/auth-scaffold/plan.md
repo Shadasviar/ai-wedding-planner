@@ -681,8 +681,8 @@ async authorize(credentials) {
 
 #### Automated
 
-- [x] 6.1 TypeScript compiles: `npm run build`
-- [x] 6.2 Middleware file exists
+- [x] 6.1 TypeScript compiles: `npm run build` — 04a56f9
+- [x] 6.2 Middleware file exists — 04a56f9
 
 #### Manual
 
@@ -694,8 +694,8 @@ async authorize(credentials) {
 
 #### Automated
 
-- [ ] 7.1 TypeScript compiles: `npm run build`
-- [ ] 7.2 Seed users file exists
+- [x] 7.1 TypeScript compiles: `npm run build`
+- [x] 7.2 Seed users file exists
 
 #### Manual
 
