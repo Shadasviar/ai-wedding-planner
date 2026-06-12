@@ -636,8 +636,8 @@ async authorize(credentials) {
 
 #### Automated
 
-- [x] 2.1 TypeScript compiles without errors: `npm run build`
-- [x] 2.2 No ESLint errors: `npm run lint`
+- [x] 2.1 TypeScript compiles without errors: `npm run build` — d4e1f15
+- [x] 2.2 No ESLint errors: `npm run lint` — d4e1f15
 
 #### Manual
 
@@ -647,8 +647,8 @@ async authorize(credentials) {
 
 #### Automated
 
-- [ ] 3.1 TypeScript compiles: `npm run build`
-- [ ] 3.2 Route file exists at correct path
+- [x] 3.1 TypeScript compiles: `npm run build`
+- [x] 3.2 Route file exists at correct path
 
 #### Manual
 
