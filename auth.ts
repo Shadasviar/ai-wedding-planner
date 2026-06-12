@@ -1,7 +1,7 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcryptjs"
-import { SEED_USERS } from "@/lib/db/schema"
+import { findUserByUsername } from "@/lib/db/schema"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -12,17 +12,25 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
-        const user = SEED_USERS.find(u => u.username === credentials?.username)
+        if (!credentials?.username || !credentials?.password) {
+          return null
+        }
+
+        const user = await findUserByUsername(credentials.username as string)
         if (!user) return null
 
         const validPassword = await bcrypt.compare(
-          credentials?.password as string,
-          user.password
+          credentials.password as string,
+          user.passwordHash
         )
 
         if (!validPassword) return null
 
-        return { id: user.username, name: user.username, email: `${user.username}@example.com` }
+        return {
+          id: user.id.toString(),
+          name: user.username,
+          email: `${user.username}@example.com`
+        }
       }
     })
   ],
