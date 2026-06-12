@@ -624,20 +624,20 @@ async authorize(credentials) {
 
 #### Automated
 
-- [x] 1.1 `npm list next-auth` shows version 5.0.0-beta.x
-- [x] 1.2 `npm list bcryptjs` shows version 3.x
-- [x] 1.3 `.env.local` contains `AUTH_SECRET=` line
+- [x] 1.1 `npm list next-auth` shows version 5.0.0-beta.x — c0a425a
+- [x] 1.2 `npm list bcryptjs` shows version 3.x — c0a425a
+- [x] 1.3 `.env.local` contains `AUTH_SECRET=` line — c0a425a
 
 #### Manual
 
-- [x] 1.4 Verify `.env.local` is in `.gitignore`
+- [x] 1.4 Verify `.env.local` is in `.gitignore` — c0a425a
 
 ### Phase 2: Configure Auth.js
 
 #### Automated
 
-- [ ] 2.1 TypeScript compiles without errors: `npm run build`
-- [ ] 2.2 No ESLint errors: `npm run lint`
+- [x] 2.1 TypeScript compiles without errors: `npm run build`
+- [x] 2.2 No ESLint errors: `npm run lint`
 
 #### Manual
 
