@@ -19,7 +19,7 @@ Transform `src/app/page.tsx` from a minimal authenticated placeholder into a pro
 
 **Key constraints:**
 - S-03 only requires F-01 (auth) — no database queries (keeps scope minimal)
-- Must remain a Server Component (no client-side waterfalls for empty state)
+- Dashboard page (`src/app/page.tsx`) remains a Server Component; interactive child components may use `"use client"` as needed
 - Routes `/guests`, `/services`, `/timeline`, `/finances` don't exist yet (navigation stubs only)
 
 ## Desired End State
