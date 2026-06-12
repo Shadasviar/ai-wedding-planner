@@ -641,7 +641,7 @@ async authorize(credentials) {
 
 #### Manual
 
-- [ ] 2.3 Verify auth.ts exports: handlers, signIn, signOut, auth
+- [x] 2.3 Verify auth.ts exports: handlers, signIn, signOut, auth
 
 ### Phase 3: Create API Route
 
@@ -652,7 +652,7 @@ async authorize(credentials) {
 
 #### Manual
 
-- [ ] 3.3 POST to `/api/auth/[...nextauth]` with valid credentials returns session
+- [x] 3.3 POST to `/api/auth/[...nextauth]` with valid credentials returns session
 
 ### Phase 4: Build Login Page
 
@@ -663,9 +663,9 @@ async authorize(credentials) {
 
 #### Manual
 
-- [ ] 4.3 Login page renders at `/login`
-- [ ] 4.4 Form submits and redirects to `/` on success
-- [ ] 4.5 Invalid credentials show error message
+- [x] 4.3 Login page renders at `/login`
+- [x] 4.4 Form submits and redirects to `/` on success
+- [x] 4.5 Invalid credentials show error message
 
 ### Phase 5: Add Session Provider
 
@@ -675,7 +675,7 @@ async authorize(credentials) {
 
 #### Manual
 
-- [ ] 5.2 Session is accessible in client components via `useSession()` hook
+- [x] 5.2 Session is accessible in client components via `useSession()` hook
 
 ### Phase 6: Protect Routes
 
@@ -686,19 +686,19 @@ async authorize(credentials) {
 
 #### Manual
 
-- [ ] 6.3 Unauthenticated access to `/` redirects to `/login`
-- [ ] 6.4 After login, user sees dashboard
-- [ ] 6.5 Sign out button clears session and redirects to `/login`
+- [x] 6.3 Unauthenticated access to `/` redirects to `/login`
+- [x] 6.4 After login, user sees dashboard
+- [x] 6.5 Sign out button clears session and redirects to `/login`
 
 ### Phase 7: Create User Seed
 
 #### Automated
 
-- [x] 7.1 TypeScript compiles: `npm run build`
-- [x] 7.2 Seed users file exists
+- [x] 7.1 TypeScript compiles: `npm run build` — f21a2de
+- [x] 7.2 Seed users file exists — f21a2de
 
 #### Manual
 
-- [ ] 7.3 Can login with seed user credentials
-- [ ] 7.4 Invalid username shows error
-- [ ] 7.5 Invalid password shows error
+- [x] 7.3 Can login with seed user credentials
+- [x] 7.4 Invalid username shows error
+- [x] 7.5 Invalid password shows error
