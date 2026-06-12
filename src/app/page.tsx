@@ -1,6 +1,7 @@
 import { auth } from "@root/auth"
 import { redirect } from "next/navigation"
 import { signOut } from "@root/auth"
+import { DashboardCard } from "@/components/dashboard-card"
 
 export default async function Home() {
   const session = await auth()
@@ -10,21 +11,49 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex min-h-full flex-col items-center justify-center p-8">
-      <h1 className="text-2xl font-semibold">Welcome, {session.user?.name}</h1>
-      <p className="mt-4 text-zinc-600">Wedding Planner Dashboard</p>
+    <div className="min-h-full flex flex-col p-8">
+      {/* Header with welcome and sign out */}
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-2xl font-semibold">Welcome, {session.user?.name}</h1>
+        <form
+          action={async () => {
+            "use server"
+            await signOut()
+          }}
+        >
+          <button className="rounded-md border border-zinc-300 px-4 py-2 hover:bg-zinc-50">
+            Sign Out
+          </button>
+        </form>
+      </div>
 
-      <form
-        action={async () => {
-          "use server"
-          await signOut()
-        }}
-        className="mt-8"
-      >
-        <button className="rounded-md border border-zinc-300 px-4 py-2 hover:bg-zinc-50">
-          Sign Out
-        </button>
-      </form>
+      {/* Dashboard grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <DashboardCard
+          title="Guests"
+          emptyMessage="No guests added yet — Add your first guest to start tracking!"
+          ctaLabel="Add first guest"
+          href="/guests"
+        />
+        <DashboardCard
+          title="Services"
+          emptyMessage="No services added yet — Add your first service to track vendors!"
+          ctaLabel="Add first service"
+          href="/services"
+        />
+        <DashboardCard
+          title="Timeline"
+          emptyMessage="No activities planned yet — Add your first activity to stay on track!"
+          ctaLabel="Add first activity"
+          href="/timeline"
+        />
+        <DashboardCard
+          title="Finances"
+          emptyMessage="Total wedding cost so far"
+          ctaLabel="$0.00"
+          href="/finances"
+        />
+      </div>
     </div>
   )
 }
