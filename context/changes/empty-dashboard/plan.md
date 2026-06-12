@@ -358,29 +358,29 @@ None — per the low-complexity goal and consistency with F-01/F-02, manual veri
 
 #### Automated
 
-- [x] 1.1 TypeScript compiles: `npm run build`
-- [x] 1.2 No ESLint errors: `npm run lint`
-- [x] 1.3 Component exports `DashboardCard` with correct props
+- [x] 1.1 TypeScript compiles: `npm run build` — 04c46d4
+- [x] 1.2 No ESLint errors: `npm run lint` — 04c46d4
+- [x] 1.3 Component exports `DashboardCard` with correct props — 04c46d4
 
 #### Manual
 
-- [ ] 1.4 Card renders with correct styling (white bg, shadow, rounded corners)
-- [ ] 1.5 Disabled button shows grayed-out appearance with tooltip on hover
+- [x] 1.4 Card renders with correct styling (white bg, shadow, rounded corners) — 04c46d4
+- [x] 1.5 Disabled button shows grayed-out appearance with tooltip on hover — 04c46d4
 
 ### Phase 2: Build Dashboard Grid Layout
 
 #### Automated
 
-- [x] 2.1 TypeScript compiles: `npm run build`
-- [x] 2.2 No ESLint errors: `npm run lint`
-- [x] 2.3 Grid layout uses responsive classes (`grid-cols-1 md:grid-cols-2`)
+- [x] 2.1 TypeScript compiles: `npm run build` — 04c46d4
+- [x] 2.2 No ESLint errors: `npm run lint` — 04c46d4
+- [x] 2.3 Grid layout uses responsive classes (`grid-cols-1 md:grid-cols-2`) — 04c46d4
 
 #### Manual
 
-- [x] 2.4 Dashboard renders at `/` with 4 cards visible
-- [x] 2.5 Layout is 2x2 on desktop, single column on mobile (test by resizing browser)
-- [x] 2.6 Welcome message and Sign Out button appear in header
-- [x] 2.7 All empty state messages display correctly with friendly tone
+- [x] 2.4 Dashboard renders at `/` with 4 cards visible — 04c46d4
+- [x] 2.5 Layout is 2x2 on desktop, single column on mobile (test by resizing browser) — 04c46d4
+- [x] 2.6 Welcome message and Sign Out button appear in header — 04c46d4
+- [x] 2.7 All empty state messages display correctly with friendly tone — 04c46d4
 
 **Note**: Fixed during implementation - added `"use client"` to DashboardCard component to support onClick handler.
 
@@ -388,25 +388,25 @@ None — per the low-complexity goal and consistency with F-01/F-02, manual veri
 
 #### Automated
 
-- [ ] 3.1 TypeScript compiles: `npm run build`
+- [x] 3.1 TypeScript compiles: `npm run build` — 04c46d4
 
 #### Manual
 
-- [ ] 3.2 Clicking any card doesn't navigate (URL doesn't change)
-- [ ] 3.3 Hovering over disabled button shows "Coming in next update" tooltip
-- [ ] 3.4 Disabled button is visually distinct (gray, cursor-not-allowed)
+- [x] 3.2 Clicking any card doesn't navigate (URL doesn't change) — 04c46d4
+- [x] 3.3 Hovering over disabled button shows "Coming in next update" tooltip — 04c46d4
+- [x] 3.4 Disabled button is visually distinct (gray, cursor-not-allowed) — 04c46d4
 
 ### Phase 4: Final Verification & Polish
 
 #### Automated
 
-- [ ] 4.1 TypeScript compiles: `npm run build`
-- [ ] 4.2 No ESLint errors: `npm run lint`
+- [x] 4.1 TypeScript compiles: `npm run build`
+- [x] 4.2 No ESLint errors: `npm run lint`
 
 #### Manual
 
-- [ ] 4.3 Auth redirect works (logged out → login)
-- [ ] 4.4 Dashboard renders after login
-- [ ] 4.5 Responsive layout works (2x2 desktop, stacked mobile)
-- [ ] 4.6 All tooltips display on hover
-- [ ] 4.7 Sign out works correctly
+- [x] 4.3 Auth redirect works (logged out → login)
+- [x] 4.4 Dashboard renders after login
+- [x] 4.5 Responsive layout works (2x2 desktop, stacked mobile)
+- [x] 4.6 All tooltips display on hover
+- [x] 4.7 Sign out works correctly
