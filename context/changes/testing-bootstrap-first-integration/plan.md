@@ -360,10 +360,10 @@ Update `context/foundation/test-plan.md` §6 with the landed pattern.
 
 #### Automated
 
-- [x] 1.1 Run `npm install` to add vitest and @vitest/ui
-- [x] 1.2 Create `vitest.config.ts` at project root
-- [x] 1.3 Add `"test": "vitest"` script to package.json
-- [x] 1.4 Verify `npm test -- --run` executes without crashing
+- [x] 1.1 Run `npm install` to add vitest and @vitest/ui — bbe0023
+- [x] 1.2 Create `vitest.config.ts` at project root — bbe0023
+- [x] 1.3 Add `"test": "vitest"` script to package.json — bbe0023
+- [x] 1.4 Verify `npm test -- --run` executes without crashing — bbe0023
 
 #### Manual
 
@@ -373,9 +373,9 @@ Update `context/foundation/test-plan.md` §6 with the landed pattern.
 
 #### Automated
 
-- [ ] 2.1 Create `src/lib/db/test-db.ts` with `getTestDb()` and `resetTestDb()`
-- [ ] 2.2 Verify test DB file `.data/test.db` can be created
-- [ ] 2.3 Verify `resetTestDb()` runs without errors
+- [x] 2.1 Create `src/lib/db/test-db.ts` with `getTestDb()` and `resetTestDb()`
+- [x] 2.2 Verify test DB file `.data/test.db` can be created
+- [x] 2.3 Verify `resetTestDb()` runs without errors
 
 #### Manual
 
