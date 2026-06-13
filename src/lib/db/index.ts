@@ -17,4 +17,6 @@ try {
   throw error
 }
 
-export const db = drizzle(sqlite)
+import * as schema from './schema'
+
+export const db = drizzle(sqlite, { schema })
