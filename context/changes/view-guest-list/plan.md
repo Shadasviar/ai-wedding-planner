@@ -291,27 +291,27 @@ None — the change is purely presentational.
 
 #### Automated
 
-- [x] 2.1 TypeScript compiles: `npm run typecheck` — 0606e8f
-- [x] 2.2 Linting passes: `npm run lint` — 0606e8f
-- [x] 2.3 Build succeeds: `npm run build` — 0606e8f
+- [x] 2.1 TypeScript compiles: `npm run typecheck` — 178e7f6
+- [x] 2.2 Linting passes: `npm run lint` — 178e7f6
+- [x] 2.3 Build succeeds: `npm run build` — 178e7f6
 
 #### Manual
 
-- [ ] 2.4 Dashboard loads without errors
-- [ ] 2.5 Guests card shows correct state (empty or filled)
-- [ ] 2.6 Other cards (Services, Timeline, Finances) unchanged
-- [ ] 2.7 Navigation to `/guests` works from Guests card
+- [x] 2.4 Dashboard loads without errors — 178e7f6
+- [x] 2.5 Guests card shows correct state (empty or filled) — 178e7f6
+- [x] 2.6 Other cards (Services, Timeline, Finances) unchanged — 178e7f6
+- [x] 2.7 Navigation to `/guests` works from Guests card — 178e7f6
 
 ### Phase 3: Verification & Polish
 
 #### Automated
 
-- [ ] 3.1 No console errors in browser dev tools
+- [x] 3.1 No console errors in browser dev tools — 178e7f6
 
 #### Manual
 
-- [ ] 3.2 Empty state displays correctly (Polish text)
-- [ ] 3.3 Filled state displays correct stats (Polish labels)
-- [ ] 3.4 All calculations match `/guests` page summary
-- [ ] 3.5 Card click navigates to `/guests`
-- [ ] 3.6 All Polish labels display correctly (UTF-8 encoding)
+- [x] 3.2 Empty state displays correctly (Polish text) — 178e7f6
+- [x] 3.3 Filled state displays correct stats (Polish labels) — 178e7f6
+- [x] 3.4 All calculations match `/guests` page summary — 178e7f6
+- [x] 3.5 Card click navigates to `/guests` — 178e7f6
+- [x] 3.6 All Polish labels display correctly (UTF-8 encoding) — 178e7f6

@@ -1,7 +1,7 @@
 ---
 change_id: view-guest-list
 title: View guest list — Dashboard card fix
-status: implementing
+status: implemented
 created: 2026-06-13
 updated: 2026-06-13
 archived_at: null
