@@ -406,27 +406,27 @@ None for MVP.
 
 #### Automated
 
-- [x] 1.1 Schema compiles: `npm run typecheck`
-- [x] 1.2 Migration generates: `npm run db:generate`
-- [x] 1.3 Migration applies: `npm run db:migrate`
+- [x] 1.1 Schema compiles: `npm run typecheck` — 21c225a
+- [x] 1.2 Migration generates: `npm run db:generate` — 21c225a
+- [x] 1.3 Migration applies: `npm run db:migrate` — 21c225a
 
 #### Manual
 
-- [x] 1.4 Verify table exists in database: `npm run db:studio` shows `guests` table
-- [x] 1.5 Verify columns match design (name, spouseName, childrenCount, createdAt)
+- [x] 1.4 Verify table exists in database: `npm run db:studio` shows `guests` table — 21c225a
+- [x] 1.5 Verify columns match design (name, spouseName, childrenCount, createdAt) — 21c225a
 
 ### Phase 2: Server Actions for Guest CRUD
 
 #### Automated
 
-- [ ] 2.1 TypeScript compiles without errors
-- [ ] 2.2 ESLint passes: `npm run lint`
+- [x] 2.1 TypeScript compiles without errors
+- [x] 2.2 ESLint passes: `npm run lint`
 
 #### Manual
 
-- [ ] 2.3 Test in db:studio: create a guest, verify it appears
-- [ ] 2.4 Test update: modify a guest, verify changes persist
-- [ ] 2.5 Test delete: remove a guest, verify it's gone
+- [x] 2.3 Test in db:studio: create a guest, verify it appears
+- [x] 2.4 Test update: modify a guest, verify changes persist
+- [x] 2.5 Test delete: remove a guest, verify it's gone
 
 ### Phase 3: Guest List Page with Add Modal
 
