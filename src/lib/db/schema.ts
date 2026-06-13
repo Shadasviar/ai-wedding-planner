@@ -1,6 +1,4 @@
 import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core'
-import { eq } from 'drizzle-orm'
-import { db } from '.'
 
 export const users = sqliteTable('users', {
   id: integer('id').primaryKey({ autoIncrement: true }),
@@ -13,8 +11,10 @@ export const users = sqliteTable('users', {
 export type User = typeof users.$inferSelect
 export type NewUser = typeof users.$inferInsert
 
-// Helper function for auth lookup
+// Helper function for auth lookup (lazy import to avoid circular dependency)
 export async function findUserByUsername(username: string) {
+  const { db } = await import('.')
+  const { eq } = await import('drizzle-orm')
   return db.select().from(users).where(eq(users.username, username)).get()
 }
 
