@@ -23,3 +23,16 @@ export const SEED_USERS = [
   { username: "admin", password: "$2b$10$db4SJG3xrNTJ5TSSZN6OmupEeVcjB6iqW3pWON9QxZ1nYqZZi298K" },
   { username: "user", password: "$2b$10$2BGY4seHkFm/oFKYsYqR5eTAKq03OjTFo17ZmYxR/4bwMAUxTHEiK" },
 ]
+
+// Guests table for wedding guest management
+export const guests = sqliteTable('guests', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  name: text('name').notNull(),
+  spouseName: text('spouse_name'),
+  childrenCount: integer('children_count').notNull().default(0),
+  createdAt: integer('created_at', { mode: 'timestamp' }).notNull().$defaultFn(() => new Date()),
+})
+
+// Type exports for use in app code
+export type Guest = typeof guests.$inferSelect
+export type NewGuest = typeof guests.$inferInsert
