@@ -5,7 +5,8 @@ import { mkdirSync, existsSync, rmSync } from 'fs'
 import { dirname, resolve } from 'path'
 import * as schema from './schema'
 
-const TEST_DB_PATH = process.env.DATABASE_PATH ?? '.data/test.db'
+const TEST_DB_DIR = process.env.DATABASE_PATH ?? '.data/test-db'
+const TEST_DB_PATH = `${TEST_DB_DIR}/test.db`
 
 export function getTestDb() {
   mkdirSync(dirname(TEST_DB_PATH), { recursive: true })
@@ -16,13 +17,11 @@ export function getTestDb() {
 }
 
 export function resetTestDb() {
-  if (existsSync(TEST_DB_PATH)) {
-    rmSync(TEST_DB_PATH, { force: true })
-    // Also remove WAL files if they exist
-    rmSync(`${TEST_DB_PATH}-wal`, { force: true })
-    rmSync(`${TEST_DB_PATH}-shm`, { force: true })
+  // Remove entire test DB directory for clean state
+  if (existsSync(TEST_DB_DIR)) {
+    rmSync(TEST_DB_DIR, { recursive: true, force: true })
   }
-  mkdirSync(dirname(TEST_DB_PATH), { recursive: true })
+  mkdirSync(TEST_DB_DIR, { recursive: true })
 
   // Run migrations to create schema
   const sqlite = new Database(TEST_DB_PATH)
