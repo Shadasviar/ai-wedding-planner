@@ -432,17 +432,17 @@ None for MVP.
 
 #### Automated
 
-- [x] 3.1 TypeScript compiles: `npm run typecheck`
-- [x] 3.2 Linting passes: `npm run lint`
-- [x] 3.3 Build succeeds: `npm run build`
+- [x] 3.1 TypeScript compiles: `npm run typecheck` — 26843d3
+- [x] 3.2 Linting passes: `npm run lint` — 26843d3
+- [x] 3.3 Build succeeds: `npm run build` — 26843d3
 
 #### Manual
 
-- [ ] 3.4 Navigate to `/guests` from dashboard
-- [ ] 3.5 Click "Add Guest" — modal opens
-- [ ] 3.6 Fill form and submit — guest appears in list
-- [ ] 3.7 Aggregate summary updates with new totals
-- [ ] 3.8 Empty state shows when no guests exist
+- [x] 3.4 Navigate to `/guests` from dashboard — 26843d3
+- [x] 3.5 Click "Add Guest" — modal opens — 26843d3
+- [x] 3.6 Fill form and submit — guest appears in list — 26843d3
+- [x] 3.7 Aggregate summary updates with new totals — 26843d3
+- [x] 3.8 Empty state shows when no guests exist — 26843d3
 
 ### Phase 4: Edit & Delete Functionality
 

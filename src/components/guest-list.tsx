@@ -3,6 +3,8 @@
 import { useState } from "react"
 import type { Guest } from "@/lib/db/schema"
 import { AddGuestModal } from "./add-guest-modal"
+import { EditGuestModal } from "./edit-guest-modal"
+import { DeleteGuestModal } from "./delete-guest-modal"
 
 interface GuestListProps {
   guests: Guest[]
@@ -11,6 +13,9 @@ interface GuestListProps {
 
 export function GuestList({ guests, onRefresh }: GuestListProps) {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false)
+  const [editingGuest, setEditingGuest] = useState<Guest | null>(null)
+  const [deletingGuest, setDeletingGuest] = useState<Guest | null>(null)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   // Calculate totals
   // Default: each guest has a partner slot, unless comingAlone=true
@@ -107,19 +112,17 @@ export function GuestList({ guests, onRefresh }: GuestListProps) {
                 </p>
               </div>
 
-              {/* Action buttons - edit and delete coming in Phase 4 */}
+              {/* Action buttons */}
               <div className="mt-4 flex gap-2">
                 <button
-                  disabled
-                  className="flex-1 rounded-md border border-zinc-200 px-3 py-1.5 text-sm font-medium text-zinc-500 cursor-not-allowed"
-                  title="Edycja w następnej aktualizacji"
+                  onClick={() => setEditingGuest(guest)}
+                  className="flex-1 rounded-md border border-zinc-300 px-3 py-1.5 text-sm font-medium text-zinc-700 hover:bg-zinc-50"
                 >
                   Edytuj
                 </button>
                 <button
-                  disabled
-                  className="flex-1 rounded-md border border-zinc-200 px-3 py-1.5 text-sm font-medium text-zinc-500 cursor-not-allowed"
-                  title="Usuwanie w następnej aktualizacji"
+                  onClick={() => setDeletingGuest(guest)}
+                  className="flex-1 rounded-md border border-red-300 px-3 py-1.5 text-sm font-medium text-red-700 hover:bg-red-50"
                 >
                   Usuń
                 </button>
@@ -156,6 +159,42 @@ export function GuestList({ guests, onRefresh }: GuestListProps) {
         isOpen={isAddModalOpen}
         onClose={() => setIsAddModalOpen(false)}
         onAdd={onRefresh}
+      />
+
+      <EditGuestModal
+        guest={editingGuest}
+        isOpen={!!editingGuest}
+        onClose={() => setEditingGuest(null)}
+        onSave={() => {
+          setEditingGuest(null)
+          onRefresh()
+        }}
+      />
+
+      <DeleteGuestModal
+        guestName={deletingGuest?.name || ""}
+        isOpen={!!deletingGuest}
+        onClose={() => setDeletingGuest(null)}
+        onConfirm={async () => {
+          if (!deletingGuest) return
+          setIsDeleting(true)
+          try {
+            const response = await fetch(`/api/guests/${deletingGuest.id}`, {
+              method: "DELETE",
+            })
+            if (!response.ok) {
+              const data = await response.json()
+              throw new Error(data.error || "Nie udało się usunąć gościa")
+            }
+            onRefresh()
+            setDeletingGuest(null)
+          } catch (error) {
+            console.error("Failed to delete guest:", error)
+            alert(error instanceof Error ? error.message : "Nie udało się usunąć gościa")
+          } finally {
+            setIsDeleting(false)
+          }
+        }}
       />
     </div>
   )
