@@ -448,26 +448,26 @@ None for MVP.
 
 #### Automated
 
-- [ ] 4.1 TypeScript compiles: `npm run typecheck`
-- [ ] 4.2 Linting passes: `npm run lint`
+- [x] 4.1 TypeScript compiles: `npm run typecheck` — 85bb8ba
+- [x] 4.2 Linting passes: `npm run lint` — 85bb8ba
 
 #### Manual
 
-- [ ] 4.3 Click edit on a guest — modal opens with data pre-filled
-- [ ] 4.4 Modify and save — changes appear in list
-- [ ] 4.5 Click delete — confirmation modal appears
-- [ ] 4.6 Confirm delete — guest removed from list
-- [ ] 4.7 Aggregate totals update correctly
+- [x] 4.3 Click edit on a guest — modal opens with data pre-filled — 85bb8ba
+- [x] 4.4 Modify and save — changes appear in list — 85bb8ba
+- [x] 4.5 Click delete — confirmation modal appears — 85bb8ba
+- [x] 4.6 Confirm delete — guest removed from list — 85bb8ba
+- [x] 4.7 Aggregate totals update correctly — 85bb8ba
 
 ### Phase 5: Polish & Edge Cases
 
 #### Automated
 
-- [ ] 5.1 No console errors in browser dev tools
+- [x] 5.1 No console errors in browser dev tools — <sha>
 
 #### Manual
 
-- [ ] 5.2 Try to submit empty form — validation error appears
-- [ ] 5.3 Submit with valid data — loading state shows, then success
-- [ ] 5.4 Delete last guest — empty state shown
-- [ ] 5.5 All Polish labels display correctly
+- [x] 5.2 Try to submit empty form — validation error appears — <sha>
+- [x] 5.3 Submit with valid data — loading state shows, then success — <sha>
+- [x] 5.4 Delete last guest — empty state shown — <sha>
+- [x] 5.5 All Polish labels display correctly — <sha>
