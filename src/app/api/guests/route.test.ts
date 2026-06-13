@@ -29,6 +29,13 @@ describe('Guests API', () => {
     const createResponse = await POST(createRequest)
     expect(createResponse.status).toBe(201)
     const created = await createResponse.json()
+    // Verify response shape (Risk #5: API schema drift)
+    expect(created).toHaveProperty('id')
+    expect(created).toHaveProperty('name')
+    expect(created).toHaveProperty('spouseName')
+    expect(created).toHaveProperty('childrenCount')
+    expect(created).toHaveProperty('comingAlone')
+    expect(created).toHaveProperty('createdAt')
     expect(created.name).toBe('John Doe')
 
     // Verify via GET
