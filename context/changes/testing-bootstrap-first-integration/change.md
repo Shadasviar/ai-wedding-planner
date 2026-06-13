@@ -1,7 +1,7 @@
 ---
 change_id: testing-bootstrap-first-integration
 title: Bootstrap test runner and first integration test
-status: implementing
+status: implemented
 created: 2026-06-13
 updated: 2026-06-13
 archived_at: null

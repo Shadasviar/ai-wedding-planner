@@ -398,8 +398,8 @@ Update `context/foundation/test-plan.md` §6 with the landed pattern.
 
 #### Automated
 
-- [x] 4.1 Update `context/foundation/test-plan.md` §6 Cookbook
-- [x] 4.2 Replace TBD for Phase 1 with landed pattern
+- [x] 4.1 Update `context/foundation/test-plan.md` §6 Cookbook — 55b9fae
+- [x] 4.2 Replace TBD for Phase 1 with landed pattern — 55b9fae
 
 #### Manual
 
