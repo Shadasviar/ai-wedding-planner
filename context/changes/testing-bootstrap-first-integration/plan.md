@@ -373,9 +373,9 @@ Update `context/foundation/test-plan.md` §6 with the landed pattern.
 
 #### Automated
 
-- [x] 2.1 Create `src/lib/db/test-db.ts` with `getTestDb()` and `resetTestDb()`
-- [x] 2.2 Verify test DB file `.data/test.db` can be created
-- [x] 2.3 Verify `resetTestDb()` runs without errors
+- [x] 2.1 Create `src/lib/db/test-db.ts` with `getTestDb()` and `resetTestDb()` — adbcdcc
+- [x] 2.2 Verify test DB file `.data/test.db` can be created — adbcdcc
+- [x] 2.3 Verify `resetTestDb()` runs without errors — adbcdcc
 
 #### Manual
 
@@ -385,10 +385,10 @@ Update `context/foundation/test-plan.md` §6 with the landed pattern.
 
 #### Automated
 
-- [ ] 3.1 Create `src/app/api/guests/route.test.ts`
-- [ ] 3.2 Mock `auth()` via `vi.mock()`
-- [ ] 3.3 Write POST → GET integration test
-- [ ] 3.4 Run `npm test -- --run` and verify test passes
+- [x] 3.1 Create `src/app/api/guests/route.test.ts`
+- [x] 3.2 Mock `auth()` via `vi.mock()`
+- [x] 3.3 Write POST → GET integration test
+- [x] 3.4 Run `npm test -- --run` and verify test passes
 
 #### Manual
 
