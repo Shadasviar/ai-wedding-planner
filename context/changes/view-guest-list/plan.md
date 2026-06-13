@@ -26,7 +26,7 @@ After implementation:
 - Dashboard Guests card shows dynamic content based on actual guest count
 - **Empty state** (0 guests): Shows current message "No guests added yet..." and "Add first guest" button
 - **Filled state** (1+ guests): Shows summary stats in Polish:
-  - "Liczba gości: X"
+  - "Liczba zaproszeń: X" (number of guest records/invitations)
   - "Łączna liczba dzieci: Y"
   - "Łączna liczba miejsc: Z"
 - Card remains clickable, navigating to `/guests`
@@ -94,7 +94,7 @@ Create a new server component that fetches guest data and renders the dashboard 
 - **Filled state** (guests.length > 0):
   - Title: "Goście"
   - Stats list (unordered list or div grid):
-    - "Liczba gości: {totalGuests}"
+    - "Liczba zaproszeń: {totalGuests}" (guest records, not headcount)
     - "Łączna liczba dzieci: {totalChildren}"
     - "Łączna liczba miejsc: {totalSeats}"
   - Button: "Zarządzaj gośćmi" or "Zobacz listę"
