@@ -419,22 +419,22 @@ None for MVP.
 
 #### Automated
 
-- [x] 2.1 TypeScript compiles without errors
-- [x] 2.2 ESLint passes: `npm run lint`
+- [x] 2.1 TypeScript compiles without errors — b7ff839
+- [x] 2.2 ESLint passes: `npm run lint` — b7ff839
 
 #### Manual
 
-- [x] 2.3 Test in db:studio: create a guest, verify it appears
-- [x] 2.4 Test update: modify a guest, verify changes persist
-- [x] 2.5 Test delete: remove a guest, verify it's gone
+- [x] 2.3 Test in db:studio: create a guest, verify it appears — b7ff839
+- [x] 2.4 Test update: modify a guest, verify changes persist — b7ff839
+- [x] 2.5 Test delete: remove a guest, verify it's gone — b7ff839
 
 ### Phase 3: Guest List Page with Add Modal
 
 #### Automated
 
-- [ ] 3.1 TypeScript compiles: `npm run typecheck`
-- [ ] 3.2 Linting passes: `npm run lint`
-- [ ] 3.3 Build succeeds: `npm run build`
+- [x] 3.1 TypeScript compiles: `npm run typecheck`
+- [x] 3.2 Linting passes: `npm run lint`
+- [x] 3.3 Build succeeds: `npm run build`
 
 #### Manual
 

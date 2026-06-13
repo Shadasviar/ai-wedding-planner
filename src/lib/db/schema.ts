@@ -31,6 +31,7 @@ export const guests = sqliteTable('guests', {
   spouseName: text('spouse_name'),
   childrenCount: integer('children_count').notNull().default(0),
   createdAt: integer('created_at', { mode: 'timestamp' }).notNull().$defaultFn(() => new Date()),
+  comingAlone: integer('coming_alone', { mode: 'boolean' }).notNull().default(false),
 })
 
 // Type exports for use in app code

@@ -1,0 +1,1 @@
+ALTER TABLE `guests` ADD `coming_alone` integer DEFAULT false NOT NULL;
