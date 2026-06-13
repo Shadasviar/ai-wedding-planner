@@ -385,10 +385,10 @@ Update `context/foundation/test-plan.md` §6 with the landed pattern.
 
 #### Automated
 
-- [x] 3.1 Create `src/app/api/guests/route.test.ts`
-- [x] 3.2 Mock `auth()` via `vi.mock()`
-- [x] 3.3 Write POST → GET integration test
-- [x] 3.4 Run `npm test -- --run` and verify test passes
+- [x] 3.1 Create `src/app/api/guests/route.test.ts` — 1dfbb9f
+- [x] 3.2 Mock `auth()` via `vi.mock()` — 1dfbb9f
+- [x] 3.3 Write POST → GET integration test — 1dfbb9f
+- [x] 3.4 Run `npm test -- --run` and verify test passes — 1dfbb9f
 
 #### Manual
 
@@ -398,8 +398,8 @@ Update `context/foundation/test-plan.md` §6 with the landed pattern.
 
 #### Automated
 
-- [ ] 4.1 Update `context/foundation/test-plan.md` §6 Cookbook
-- [ ] 4.2 Replace TBD for Phase 1 with landed pattern
+- [x] 4.1 Update `context/foundation/test-plan.md` §6 Cookbook
+- [x] 4.2 Replace TBD for Phase 1 with landed pattern
 
 #### Manual
 
