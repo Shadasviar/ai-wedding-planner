@@ -1,7 +1,8 @@
 import { drizzle } from 'drizzle-orm/better-sqlite3'
 import Database from 'better-sqlite3'
+import { migrate } from 'drizzle-orm/better-sqlite3/migrator'
 import { mkdirSync, existsSync, rmSync } from 'fs'
-import { dirname } from 'path'
+import { dirname, resolve } from 'path'
 import * as schema from './schema'
 
 const TEST_DB_PATH = process.env.DATABASE_PATH ?? '.data/test.db'
@@ -22,6 +23,11 @@ export function resetTestDb() {
     rmSync(`${TEST_DB_PATH}-shm`, { force: true })
   }
   mkdirSync(dirname(TEST_DB_PATH), { recursive: true })
-  // Re-run migrations or create schema here
-  // For Phase 1, just ensure the file exists fresh
+
+  // Run migrations to create schema
+  const sqlite = new Database(TEST_DB_PATH)
+  sqlite.pragma("journal_mode = WAL")
+  sqlite.pragma("foreign_keys = ON")
+  const db = drizzle(sqlite)
+  migrate(db, { migrationsFolder: resolve('./drizzle/migrations') })
 }
