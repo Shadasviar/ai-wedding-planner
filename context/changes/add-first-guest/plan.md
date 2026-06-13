@@ -80,10 +80,13 @@ Create the `guests` table with proper types and constraints.
 **Contract**: Add after the `users` table:
 - `id`: integer primary key (auto-increment)
 - `name`: text, not null — primary guest name
-- `spouseName`: text, nullable — spouse/partner name (null means coming alone)
+- `spouseName`: text, nullable — spouse/partner name
 - `childrenCount`: integer, not null, default 0
 - `createdAt`: timestamp, not null, default now
+- `comingAlone`: boolean, not null, default false — explicitly tracks guests without partner slot
 - Export `Guest` and `NewGuest` types
+
+**Design note**: The `comingAlone` field was added during implementation as a refinement over the original plan (which used `spouseName: null` to indicate "coming alone"). A separate boolean is more explicit and clearer.
 
 ### Success Criteria:
 
@@ -163,7 +166,7 @@ Build the `/guests` route with a list view and modal form for adding guests.
 
 **Contract**: 
 - Client component (for interactivity)
-- Props: `guests: Guest[]`
+- Props: `guests: Guest[]`, `onRefresh: () => void` — refresh callback for after mutations
 - Each card shows:
   - Guest name (bold)
   - Spouse: "Małżonek: {name}" or "Osoba towarzysząca: {name}" or nothing if solo
@@ -315,7 +318,7 @@ Handle edge cases and polish the user experience.
 - Name is required — show error if empty (Polish message: "Imię i nazwisko jest wymagane")
 - Children count must be >= 0 — error: "Liczba dzieci nie może być ujemna"
 - Spouse name is optional
-- Show inline error messages below fields in Polish
+- Show error in a banner at the top of the form (Polish text)
 
 #### 3. Loading states
 

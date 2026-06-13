@@ -1,8 +1,17 @@
 import { NextRequest, NextResponse } from "next/server"
 import { getGuests, createGuest } from "@/lib/db/guests"
+import { auth } from "@root/auth"
 
 export async function GET() {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json(
+        { error: "Nieautoryzowany dostęp" },
+        { status: 401 }
+      )
+    }
+
     const guests = await getGuests()
     return NextResponse.json(guests)
   } catch (error) {
@@ -16,6 +25,14 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json(
+        { error: "Nieautoryzowany dostęp" },
+        { status: 401 }
+      )
+    }
+
     const body = await request.json()
     const { name, spouseName, childrenCount, comingAlone } = body
 

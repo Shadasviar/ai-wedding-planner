@@ -108,7 +108,7 @@ export function EditGuestModal({ guest, isOpen, onClose, onSave }: EditGuestModa
 
           <div>
             <label className="block text-sm font-semibold text-zinc-800">
-              Czy guest przychodzi z osobą towarzyszącą?
+              Czy gość przychodzi z osobą towarzyszącą?
             </label>
             <div className="mt-2 flex gap-4">
               <label className="flex items-center gap-2">

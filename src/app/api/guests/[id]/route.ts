@@ -1,11 +1,20 @@
 import { NextRequest, NextResponse } from "next/server"
 import { updateGuest, deleteGuest } from "@/lib/db/guests"
+import { auth } from "@root/auth"
 
 export async function PUT(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json(
+        { error: "Nieautoryzowany dostęp" },
+        { status: 401 }
+      )
+    }
+
     const { id: idStr } = await params
     const id = parseInt(idStr)
 
@@ -48,6 +57,14 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const session = await auth()
+    if (!session) {
+      return NextResponse.json(
+        { error: "Nieautoryzowany dostęp" },
+        { status: 401 }
+      )
+    }
+
     const { id: idStr } = await params
     const id = parseInt(idStr)
 
