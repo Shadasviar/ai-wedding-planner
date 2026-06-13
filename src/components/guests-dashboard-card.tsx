@@ -24,7 +24,7 @@ export async function GuestsDashboardCard() {
         // Filled state: show stats
         <div className="mt-3 space-y-2">
           <div className="flex justify-between">
-            <span className="text-sm text-zinc-600">Liczba gości:</span>
+            <span className="text-sm text-zinc-600">Liczba zaproszeń:</span>
             <span className="text-sm font-semibold text-zinc-900">{totalGuests}</span>
           </div>
           <div className="flex justify-between">

@@ -276,24 +276,24 @@ None — the change is purely presentational.
 
 #### Automated
 
-- [x] 1.1 TypeScript compiles: `npm run typecheck`
-- [x] 1.2 Linting passes: `npm run lint`
-- [x] 1.3 Build succeeds: `npm run build`
+- [x] 1.1 TypeScript compiles: `npm run typecheck` — 0606e8f
+- [x] 1.2 Linting passes: `npm run lint` — 0606e8f
+- [x] 1.3 Build succeeds: `npm run build` — 0606e8f
 
 #### Manual
 
-- [ ] 1.4 Component renders without errors
-- [ ] 1.5 Empty state shows when no guests exist
-- [ ] 1.6 Filled state shows correct stats when guests exist
-- [ ] 1.7 Card is clickable and navigates to `/guests`
+- [x] 1.4 Component renders without errors — 0606e8f
+- [x] 1.5 Empty state shows when no guests exist — 0606e8f
+- [x] 1.6 Filled state shows correct stats when guests exist — 0606e8f
+- [x] 1.7 Card is clickable and navigates to `/guests` — 0606e8f
 
 ### Phase 2: Wire into Home Page
 
 #### Automated
 
-- [ ] 2.1 TypeScript compiles: `npm run typecheck`
-- [ ] 2.2 Linting passes: `npm run lint`
-- [ ] 2.3 Build succeeds: `npm run build`
+- [x] 2.1 TypeScript compiles: `npm run typecheck` — 0606e8f
+- [x] 2.2 Linting passes: `npm run lint` — 0606e8f
+- [x] 2.3 Build succeeds: `npm run build` — 0606e8f
 
 #### Manual
 
