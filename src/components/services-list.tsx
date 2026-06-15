@@ -65,14 +65,14 @@ export function ServicesList({ services, onRefresh }: ServicesListProps) {
         {services.map((service) => (
           <div
             key={service.id}
-            className="rounded-lg bg-white p-4 shadow-md border border-zinc-200"
+            className="rounded-lg bg-white p-4 shadow-md border border-zinc-200 flex flex-col h-full"
           >
             <h3 className="text-lg font-semibold text-zinc-900">
               {service.name}
             </h3>
 
             {/* Cost breakdown */}
-            <div className="mt-2">
+            <div className="mt-2 flex-1">
               <p className="text-sm text-zinc-600">
                 <span className="font-medium">Opłacone:</span> {service.paidAmount || 0} zł / {service.cost || 0} zł
               </p>
@@ -96,7 +96,7 @@ export function ServicesList({ services, onRefresh }: ServicesListProps) {
               </div>
             )}
 
-            {/* Action buttons */}
+            {/* Action buttons - pushed to bottom */}
             <div className="mt-4 flex gap-2">
               <button
                 onClick={() => setEditingService(service)}
