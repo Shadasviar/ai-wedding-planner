@@ -37,3 +37,18 @@ export const guests = sqliteTable('guests', {
 // Type exports for use in app code
 export type Guest = typeof guests.$inferSelect
 export type NewGuest = typeof guests.$inferInsert
+
+// Services table for wedding vendor/service management
+export const services = sqliteTable('services', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  name: text('name').notNull(),
+  cost: integer('cost').notNull().default(0),
+  paidAmount: integer('paid_amount').notNull().default(0),
+  notes: text('notes').notNull().default(''),
+  deadline: text('deadline'),
+  createdAt: integer('created_at', { mode: 'timestamp' }).notNull().$defaultFn(() => new Date()),
+})
+
+// Type exports for use in app code
+export type Service = typeof services.$inferSelect
+export type NewService = typeof services.$inferInsert

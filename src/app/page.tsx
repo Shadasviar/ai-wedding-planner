@@ -1,8 +1,9 @@
 import { auth } from "@root/auth"
 import { redirect } from "next/navigation"
 import { signOut } from "@root/auth"
-import { DashboardCard } from "@/components/dashboard-card"
 import { GuestsDashboardCard } from "@/components/guests-dashboard-card"
+import { ServicesDashboardCard } from "@/components/services-dashboard-card"
+import { DashboardCard } from "@/components/dashboard-card"
 
 export default async function Home() {
   const session = await auth()
@@ -31,12 +32,7 @@ export default async function Home() {
       {/* Dashboard grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <GuestsDashboardCard />
-        <DashboardCard
-          title="Services"
-          emptyMessage="No services added yet — Add your first service to track vendors!"
-          ctaLabel="Add first service"
-          href="/services"
-        />
+        <ServicesDashboardCard />
         <DashboardCard
           title="Timeline"
           emptyMessage="No activities planned yet — Add your first activity to stay on track!"

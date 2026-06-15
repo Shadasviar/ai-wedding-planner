@@ -1,9 +1,9 @@
 import { auth } from "@root/auth"
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import { GuestsPageClient } from "./guests-page-client"
+import { ServicesPageClient } from "./services-page-client"
 
-export default async function GuestsPage() {
+export default async function ServicesPage() {
   const session = await auth()
 
   if (!session) {
@@ -33,9 +33,9 @@ export default async function GuestsPage() {
         <h1 className="text-2xl font-semibold text-zinc-900">Witaj, {session.user?.name}</h1>
       </div>
 
-      {/* Guest list - client component handles all interactivity */}
+      {/* Service list - client component handles all interactivity */}
       <div className="flex-1">
-        <GuestsPageClient />
+        <ServicesPageClient />
       </div>
     </div>
   )
