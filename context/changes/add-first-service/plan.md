@@ -503,11 +503,11 @@ None for MVP.
 
 #### Manual
 
-- [x] 3.4 Navigate to `/services` from dashboard — verified with back button fix
-- [x] 3.5 Click "Dodaj usługę" — modal opens
-- [x] 3.6 Fill form and submit — service appears in list
-- [ ] 3.7 Cost breakdown displays correctly (paid / total) — requires Phase 4 list component
-- [x] 3.8 Empty state shows when no services exist
+- [x] 3.4 Navigate to `/services` from dashboard — verified with back button fix — 92161a3
+- [x] 3.5 Click "Dodaj usługę" — modal opens — 92161a3
+- [x] 3.6 Fill form and submit — service appears in list — 92161a3
+- [x] 3.7 Cost breakdown displays correctly (paid / total) — 92161a3
+- [x] 3.8 Empty state shows when no services exist — 92161a3
 
 ### Phase 4: Edit & Delete Functionality
 
@@ -518,11 +518,11 @@ None for MVP.
 
 #### Manual
 
-- [ ] 4.3 Click "Edytuj" on a service — modal opens with data pre-filled
-- [ ] 4.4 Modify and save — changes appear in list
-- [ ] 4.5 Click "Usuń" — confirmation modal appears
-- [ ] 4.6 Confirm delete — service removed from list
-- [ ] 4.7 Cost breakdown updates correctly after edit
+- [x] 4.3 Click "Edytuj" on a service — modal opens with data pre-filled — 92161a3
+- [x] 4.4 Modify and save — changes appear in list — 92161a3
+- [x] 4.5 Click "Usuń" — confirmation modal appears — 92161a3
+- [x] 4.6 Confirm delete — service removed from list — 92161a3
+- [x] 4.7 Cost breakdown updates correctly after edit — 92161a3
 
 ### Phase 5: Polish & Edge Cases
 
@@ -532,8 +532,8 @@ None for MVP.
 
 #### Manual
 
-- [x] 5.2 Try to submit empty form — validation error appears (name required, cost/paid validation)
-- [x] 5.3 Submit with valid data — loading state shows ("Dodawanie..."/"Zapisywanie..."), then success
-- [x] 5.4 Delete last service — empty state appears
-- [x] 5.5 All Polish labels display correctly
-- [x] 5.6 Aggregate summary shows correct totals (services count, total cost, paid, remaining)
+- [x] 5.2 Try to submit empty form — validation error appears (name required, cost/paid validation) — 92161a3
+- [x] 5.3 Submit with valid data — loading state shows ("Dodawanie..."/"Zapisywanie..."), then success — 92161a3
+- [x] 5.4 Delete last service — empty state appears — 92161a3
+- [x] 5.5 All Polish labels display correctly — 92161a3
+- [x] 5.6 Aggregate summary shows correct totals (services count, total cost, paid, remaining) — 92161a3
