@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import type { Service } from "@/lib/db/schema"
-import { AddServiceModal } from "@/app/services/add-service-modal"
+import { AddServiceModal } from "@/components/add-service-modal"
 import { EditServiceModal } from "./edit-service-modal"
 import { DeleteServiceModal } from "./delete-service-modal"
 

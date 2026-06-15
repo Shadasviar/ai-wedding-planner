@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { updateService, deleteService } from "@/lib/db/services"
 import { auth } from "@root/auth"
 
-export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const session = await auth()
     if (!session) {
@@ -14,9 +14,16 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
 
     const { id: idStr } = await params
     const id = parseInt(idStr)
+    if (isNaN(id)) {
+      return NextResponse.json(
+        { error: "Nieprawidłowe ID usługi" },
+        { status: 400 }
+      )
+    }
     const body = await request.json()
+    const { name, cost, paidAmount, notes, deadline } = body
 
-    const service = await updateService(id, body)
+    const service = await updateService(id, { name, cost, paidAmount, notes, deadline })
     return NextResponse.json(service)
   } catch (error) {
     console.error("Failed to update service:", error)
@@ -39,6 +46,12 @@ export async function DELETE(request: NextRequest, { params }: { params: Promise
 
     const { id: idStr } = await params
     const id = parseInt(idStr)
+    if (isNaN(id)) {
+      return NextResponse.json(
+        { error: "Nieprawidłowe ID usługi" },
+        { status: 400 }
+      )
+    }
     await deleteService(id)
     return NextResponse.json({ success: true })
   } catch (error) {

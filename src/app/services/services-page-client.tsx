@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import type { Service } from "@/lib/db/schema"
 import { ServicesList } from "@/components/services-list"
-import { AddServiceModal } from "./add-service-modal"
+import { AddServiceModal } from "@/components/add-service-modal"
 
 export function ServicesPageClient() {
   const [services, setServices] = useState<Service[]>([])

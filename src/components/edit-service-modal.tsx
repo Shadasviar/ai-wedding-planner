@@ -61,7 +61,7 @@ export function EditServiceModal({ service, isOpen, onClose, onSave }: EditServi
 
     try {
       const response = await fetch(`/api/services/${service.id}`, {
-        method: "PATCH",
+        method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: name.trim(),
