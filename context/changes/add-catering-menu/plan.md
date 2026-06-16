@@ -694,8 +694,8 @@ None for MVP.
 
 #### Automated
 
-- [x] 2.1 TypeScript compiles without errors
-- [x] 2.2 ESLint passes: `npm run lint`
+- [x] 2.1 TypeScript compiles without errors — 149e13b
+- [x] 2.2 ESLint passes: `npm run lint` — 149e13b
 
 #### Manual
 
@@ -708,9 +708,9 @@ None for MVP.
 
 #### Automated
 
-- [ ] 3.1 TypeScript compiles: `npm run typecheck`
-- [ ] 3.2 Linting passes: `npm run lint`
-- [ ] 3.3 Build succeeds: `npm run build`
+- [x] 3.1 TypeScript compiles: `npm run typecheck`
+- [x] 3.2 Linting passes: `npm run lint`
+- [x] 3.3 Build succeeds: `npm run build`
 
 #### Manual
 
