@@ -774,7 +774,7 @@ None for MVP.
 
 #### Automated
 
-- [x] 7.1 No console errors in browser dev tools
+- [x] 7.1 No console errors in browser dev tools — 64c6458
 
 #### Manual
 
