@@ -52,3 +52,27 @@ export const services = sqliteTable('services', {
 // Type exports for use in app code
 export type Service = typeof services.$inferSelect
 export type NewService = typeof services.$inferInsert
+
+// Catering settings table (single-row settings for cost per plate)
+export const catering = sqliteTable('catering', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  costPerPlate: integer('cost_per_plate').notNull().default(0),
+})
+
+// Type exports for catering settings
+export type Catering = typeof catering.$inferSelect
+export type NewCatering = typeof catering.$inferInsert
+
+// Catering menu items table
+export const cateringMenuItems = sqliteTable('catering_menu_items', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  name: text('name').notNull(),
+  type: text('type').notNull(), // "przekąska", "danie_ciepłe", "przystawka", "inne"
+  customType: text('custom_type'), // custom type text when type="inne"
+  isVege: integer('is_vege', { mode: 'boolean' }).notNull().default(false),
+  createdAt: integer('created_at', { mode: 'timestamp' }).notNull().$defaultFn(() => new Date()),
+})
+
+// Type exports for catering menu items
+export type CateringMenuItem = typeof cateringMenuItems.$inferSelect
+export type NewCateringMenuItem = typeof cateringMenuItems.$inferInsert
