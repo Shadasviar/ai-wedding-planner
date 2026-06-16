@@ -137,7 +137,7 @@ export function GuestList({ guests, onRefresh }: GuestListProps) {
         <h4 className="font-semibold text-zinc-900 mb-3">Podsumowanie</h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
           <div>
-            <span className="text-zinc-600">Liczba gości:</span>
+            <span className="text-zinc-600">Liczba zaproszeń:</span>
             <p className="text-lg font-semibold text-zinc-900">{totalGuests}</p>
           </div>
           <div>
