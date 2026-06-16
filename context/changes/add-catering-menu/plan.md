@@ -758,9 +758,9 @@ None for MVP.
 
 #### Automated
 
-- [x] 6.1 TypeScript compiles: `npm run typecheck`
-- [x] 6.2 Linting passes: `npm run lint`
-- [x] 6.3 Build succeeds: `npm run build`
+- [x] 6.1 TypeScript compiles: `npm run typecheck` — d0ebfde
+- [x] 6.2 Linting passes: `npm run lint` — d0ebfde
+- [x] 6.3 Build succeeds: `npm run build` — d0ebfde
 
 #### Manual
 
@@ -774,7 +774,7 @@ None for MVP.
 
 #### Automated
 
-- [ ] 7.1 No console errors in browser dev tools
+- [x] 7.1 No console errors in browser dev tools
 
 #### Manual
 
