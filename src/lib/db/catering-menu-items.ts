@@ -2,6 +2,9 @@ import { db } from '.'
 import { cateringMenuItems, type CateringMenuItem, type NewCateringMenuItem } from './schema'
 import { desc, eq } from 'drizzle-orm'
 
+// Valid menu item types - single source of truth
+const VALID_MENU_ITEM_TYPES = ['przekąska', 'danie_ciepłe', 'przystawka', 'inne'] as const
+
 /**
  * Get all menu items ordered by creation date (newest first)
  */
@@ -19,8 +22,7 @@ export async function createMenuItem(data: NewCateringMenuItem): Promise<Caterin
   }
 
   // Validate type is one of the allowed values
-  const validTypes = ['przekąska', 'danie_ciepłe', 'przystawka', 'inne']
-  if (!validTypes.includes(data.type)) {
+  if (!VALID_MENU_ITEM_TYPES.includes(data.type as typeof VALID_MENU_ITEM_TYPES[number])) {
     throw new Error('Nieprawidłowy typ dania')
   }
 
@@ -50,8 +52,7 @@ export async function updateMenuItem(id: number, data: Partial<NewCateringMenuIt
 
   // Validate type if provided
   if (data.type !== undefined) {
-    const validTypes = ['przekąska', 'danie_ciepłe', 'przystawka', 'inne']
-    if (!validTypes.includes(data.type)) {
+    if (!VALID_MENU_ITEM_TYPES.includes(data.type as typeof VALID_MENU_ITEM_TYPES[number])) {
       throw new Error('Nieprawidłowy typ dania')
     }
 

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import type { CateringMenuItem, Guest } from "@/lib/db/schema"
 import { AddCateringMenuItemModal } from "@/components/add-catering-menu-item-modal"
 import { EditCateringMenuItemModal } from "./edit-catering-menu-item-modal"
@@ -28,7 +28,7 @@ export function CateringMenuItemsList({
   const [totalSeats, setTotalSeats] = useState<number>(0)
 
   // Fetch guest count and calculate total seats on mount
-  useState(() => {
+  useEffect(() => {
     fetch("/api/guests")
       .then((res) => res.json())
       .then((guests: Guest[]) => {
@@ -39,7 +39,7 @@ export function CateringMenuItemsList({
         setTotalSeats(seats)
       })
       .catch(() => setTotalSeats(0))
-  })
+  }, [])
 
   const totalCateringCost = costPerPlate * totalSeats
 

@@ -17,8 +17,15 @@ export async function PATCH(
 
     const { id: idStr } = await params
     const id = parseInt(idStr)
-    const body = await request.json()
 
+    if (isNaN(id)) {
+      return NextResponse.json(
+        { error: "Nieprawidłowe ID dania" },
+        { status: 400 }
+      )
+    }
+
+    const body = await request.json()
     const menuItem = await updateMenuItem(id, body)
     return NextResponse.json(menuItem)
   } catch (error) {
@@ -45,6 +52,14 @@ export async function DELETE(
 
     const { id: idStr } = await params
     const id = parseInt(idStr)
+
+    if (isNaN(id)) {
+      return NextResponse.json(
+        { error: "Nieprawidłowe ID dania" },
+        { status: 400 }
+      )
+    }
+
     await deleteMenuItem(id)
     return NextResponse.json({ success: true })
   } catch (error) {

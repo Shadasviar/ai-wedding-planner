@@ -15,7 +15,7 @@ export async function getCateringSettings(): Promise<Catering | undefined> {
  */
 export async function updateCateringSettings(data: { costPerPlate: number }): Promise<Catering> {
   // Validate cost >= 0
-  if (data.costPerPlate < 0) {
+  if (typeof data.costPerPlate !== 'number' || isNaN(data.costPerPlate) || data.costPerPlate < 0) {
     throw new Error('Koszt za talerz nie może być ujemny')
   }
 
