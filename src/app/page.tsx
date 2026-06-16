@@ -3,6 +3,7 @@ import { redirect } from "next/navigation"
 import { signOut } from "@root/auth"
 import { GuestsDashboardCard } from "@/components/guests-dashboard-card"
 import { ServicesDashboardCard } from "@/components/services-dashboard-card"
+import { CateringDashboardCard } from "@/components/catering-dashboard-card"
 import { DashboardCard } from "@/components/dashboard-card"
 
 export default async function Home() {
@@ -30,9 +31,10 @@ export default async function Home() {
       </div>
 
       {/* Dashboard grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <GuestsDashboardCard />
         <ServicesDashboardCard />
+        <CateringDashboardCard />
         <DashboardCard
           title="Timeline"
           emptyMessage="No activities planned yet — Add your first activity to stay on track!"

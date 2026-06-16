@@ -741,8 +741,8 @@ None for MVP.
 
 #### Automated
 
-- [x] 5.1 TypeScript compiles: `npm run typecheck`
-- [x] 5.2 Linting passes: `npm run lint`
+- [x] 5.1 TypeScript compiles: `npm run typecheck` — 2569349
+- [x] 5.2 Linting passes: `npm run lint` — 2569349
 
 #### Manual
 
@@ -758,9 +758,9 @@ None for MVP.
 
 #### Automated
 
-- [ ] 6.1 TypeScript compiles: `npm run typecheck`
-- [ ] 6.2 Linting passes: `npm run lint`
-- [ ] 6.3 Build succeeds: `npm run build`
+- [x] 6.1 TypeScript compiles: `npm run typecheck`
+- [x] 6.2 Linting passes: `npm run lint`
+- [x] 6.3 Build succeeds: `npm run build`
 
 #### Manual
 

@@ -43,13 +43,17 @@ export async function updateCateringSettings(data: { costPerPlate: number }): Pr
 }
 
 /**
- * Get total catering cost: costPerPlate × guestCount
+ * Get total catering cost: costPerPlate × totalSeats
+ * totalSeats = each guest (1) + partner slot if not comingAlone (1 or 0) + children
  */
 export async function getTotalCateringCost(): Promise<number> {
   const settings = await getCateringSettings()
   const costPerPlate = settings?.costPerPlate ?? 0
 
-  const guestCount = db.select().from(guests).all().length
+  const allGuests = db.select().from(guests).all()
+  const totalSeats = allGuests.reduce((sum: number, g: typeof allGuests[0]) => {
+    return sum + 1 + (g.comingAlone ? 0 : 1) + (g.childrenCount || 0)
+  }, 0)
 
-  return costPerPlate * guestCount
+  return costPerPlate * totalSeats
 }
