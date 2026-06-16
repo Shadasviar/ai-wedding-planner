@@ -1,0 +1,55 @@
+import { db } from '.'
+import { catering, type Catering } from './schema'
+import { eq } from 'drizzle-orm'
+import { guests } from './schema'
+
+/**
+ * Get catering settings (single row with id=1)
+ */
+export async function getCateringSettings(): Promise<Catering | undefined> {
+  return db.select().from(catering).where(eq(catering.id, 1)).get()
+}
+
+/**
+ * Update or create catering settings (single-row pattern)
+ */
+export async function updateCateringSettings(data: { costPerPlate: number }): Promise<Catering> {
+  // Validate cost >= 0
+  if (data.costPerPlate < 0) {
+    throw new Error('Koszt za talerz nie może być ujemny')
+  }
+
+  // Check if row exists
+  const existing = await getCateringSettings()
+
+  if (existing) {
+    // Update existing row
+    const result = db
+      .update(catering)
+      .set(data)
+      .where(eq(catering.id, 1))
+      .returning()
+      .get()
+    return result
+  } else {
+    // Insert new row with id=1
+    const result = db
+      .insert(catering)
+      .values({ id: 1, ...data })
+      .returning()
+      .get()
+    return result
+  }
+}
+
+/**
+ * Get total catering cost: costPerPlate × guestCount
+ */
+export async function getTotalCateringCost(): Promise<number> {
+  const settings = await getCateringSettings()
+  const costPerPlate = settings?.costPerPlate ?? 0
+
+  const guestCount = db.select().from(guests).all().length
+
+  return costPerPlate * guestCount
+}

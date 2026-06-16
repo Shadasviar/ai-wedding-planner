@@ -679,9 +679,9 @@ None for MVP.
 
 #### Automated
 
-- [x] 1.1 Schema compiles: `npm run typecheck`
-- [x] 1.2 Migration generates: `npm run db:generate`
-- [x] 1.3 Migration applies: `npm run db:migrate`
+- [x] 1.1 Schema compiles: `npm run typecheck` — e2356e1
+- [x] 1.2 Migration generates: `npm run db:generate` — e2356e1
+- [x] 1.3 Migration applies: `npm run db:migrate` — e2356e1
 
 #### Manual
 
@@ -694,8 +694,8 @@ None for MVP.
 
 #### Automated
 
-- [ ] 2.1 TypeScript compiles without errors
-- [ ] 2.2 ESLint passes: `npm run lint`
+- [x] 2.1 TypeScript compiles without errors
+- [x] 2.2 ESLint passes: `npm run lint`
 
 #### Manual
 
