@@ -1,10 +1,10 @@
 ---
 change_id: add-first-guest
 title: Add first guest
-status: impl_reviewed
+status: archived
 created: 2026-06-13
-updated: 2026-06-13
-archived_at: null
+updated: 2026-06-26
+archived_at: 2026-06-26T09:28:45Z
 ---
 
 ## Notes
