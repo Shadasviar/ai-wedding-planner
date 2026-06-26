@@ -1,10 +1,10 @@
 ---
 change_id: empty-dashboard
 title: Empty dashboard
-status: implemented
+status: archived
 created: 2026-06-12
-updated: 2026-06-12
-archived_at: null
+updated: 2026-06-26
+archived_at: 2026-06-26T10:19:09Z
 ---
 
 ## Notes

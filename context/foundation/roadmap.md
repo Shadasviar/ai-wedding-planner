@@ -168,7 +168,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **F-02: (foundation) Persist wedding data** — Archived 2026-06-26 → `context/archive/2026-06-12-database-scaffold/`. Lesson: Drizzle ORM + better-sqlite3, schema at `src/lib/db/schema.ts`.
 - **S-01: Add first guest with cost** — Archived 2026-06-26 → `context/archive/2026-06-13-add-first-guest/`. Lesson: guest CRUD without cost field (PRD gap — FR-005 not yet implemented).
 - **S-02: View guest list with cost breakdown** — Archived 2026-06-13 → `context/changes/view-guest-list/`. Lesson: list view with aggregate counts (headcount, not costs).
-- **S-03: Empty dashboard** — Archived 2026-06-12 → `context/changes/empty-dashboard/`. Lesson: dashboard structure with 3 areas + Finances placeholder.
+- **S-03: Empty dashboard** — Archived 2026-06-26 → `context/archive/2026-06-12-empty-dashboard/`. Lesson: dashboard structure with 3 areas + Finances placeholder.
 - **S-04: Add first service** — Archived 2026-06-15 → `context/changes/add-first-service/`. Lesson: service CRUD with full cost tracking (cost, paidAmount).
 - **S-07: Add catering menu items with cost per plate** — Archived 2026-06-26 → `context/archive/2026-06-16-add-catering-menu/`. Lesson: catering CRUD with global cost-per-plate × guestCount aggregation.
 - **S-04: Add a service (vendor) with associated cost** — Archived 2026-06-26 → `context/archive/2026-06-15-add-first-service/`. Lesson: —.
