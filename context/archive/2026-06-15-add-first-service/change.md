@@ -1,10 +1,10 @@
 ---
 change_id: add-first-service
 title: Add first service
-status: implemented
+status: archived
 created: 2026-06-15
-updated: 2026-06-15
-archived_at: null
+updated: 2026-06-26
+archived_at: 2026-06-26T10:08:39Z
 ---
 
 ## Notes
