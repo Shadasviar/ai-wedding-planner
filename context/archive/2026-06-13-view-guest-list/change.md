@@ -1,10 +1,10 @@
 ---
 change_id: view-guest-list
 title: View guest list — Dashboard card fix
-status: implemented
+status: archived
 created: 2026-06-13
-updated: 2026-06-13
-archived_at: null
+updated: 2026-06-26
+archived_at: 2026-06-26T10:23:08Z
 ---
 
 ## Notes
