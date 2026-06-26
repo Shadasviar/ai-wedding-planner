@@ -1,10 +1,10 @@
 ---
 change_id: add-catering-menu
 title: Add catering menu
-status: implemented
+status: archived
 created: 2026-06-16
-updated: 2026-06-16
-archived_at: null
+updated: 2026-06-26
+archived_at: 2026-06-26T09:33:18Z
 ---
 
 ## Notes

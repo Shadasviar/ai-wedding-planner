@@ -37,7 +37,7 @@ A private, safe app for wedding planning — one place to track guests, vendors/
 | S-04 | add-first-service | Add a service (vendor) with associated cost | F-01, F-02 | FR-009 | done |
 | S-05 | view-finances-summary | See total wedding cost aggregated from Guests + Services + Catering | S-01, S-04, S-07 | FR-016, FR-017 | blocked |
 | S-06 | timeline-activities | Add and view timeline activities with target dates | F-01, F-02 | FR-013, FR-014, FR-015 | ready |
-| S-07 | add-catering-menu | Add catering menu items with cost per plate and dietary info | F-01, F-02 | FR-016, FR-017 | ready |
+| S-07 | add-catering-menu | Add catering menu items with cost per plate and dietary info | F-01, F-02 | FR-016, FR-017 | done |
 | S-08 | view-catering-menu | View and manage catering menu with dietary filters | S-07 | FR-016 | proposed |
 
 ## Streams
@@ -103,7 +103,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Same pattern as S-01/S-04 (add entity with cost). Risk: none — copy/paste pattern from guests/services. Menu costs must be included in S-05 aggregation.
-- **Status:** ready
+- **Status:** done
 
 ### S-08: View catering menu
 
@@ -170,3 +170,4 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **S-02: View guest list with cost breakdown** — Archived 2026-06-13 → `context/changes/view-guest-list/`. Lesson: list view with aggregate counts (headcount, not costs).
 - **S-03: Empty dashboard** — Archived 2026-06-12 → `context/changes/empty-dashboard/`. Lesson: dashboard structure with 3 areas + Finances placeholder.
 - **S-04: Add first service** — Archived 2026-06-15 → `context/changes/add-first-service/`. Lesson: service CRUD with full cost tracking (cost, paidAmount).
+- **S-07: Add catering menu items with cost per plate** — Archived 2026-06-26 → `context/archive/2026-06-16-add-catering-menu/`. Lesson: catering CRUD with global cost-per-plate × guestCount aggregation.
