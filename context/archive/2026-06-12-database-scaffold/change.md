@@ -1,10 +1,10 @@
 ---
 change_id: database-scaffold
 title: Database scaffold
-status: impl_reviewed
+status: archived
 created: 2026-06-12
-updated: 2026-06-12
-archived_at: null
+updated: 2026-06-26
+archived_at: 2026-06-26T10:16:17Z
 ---
 
 ## Notes
