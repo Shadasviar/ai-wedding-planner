@@ -164,7 +164,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 
 ## Done
 
-- **F-01: (foundation) Issue session tokens; protect routes** — Archived 2026-06-13 → `context/changes/auth-scaffold/`. Lesson: next-auth v5 with credentials provider, JWT sessions.
+- **F-01: (foundation) Issue session tokens; protect routes** — Archived 2026-06-26 → `context/archive/2026-06-12-auth-scaffold/`. Lesson: next-auth v5 with credentials provider, JWT sessions.
 - **F-02: (foundation) Persist wedding data** — Archived 2026-06-13 → `context/changes/database-scaffold/`. Lesson: Drizzle ORM + better-sqlite3, schema at `src/lib/db/schema.ts`.
 - **S-01: Add first guest with cost** — Archived 2026-06-26 → `context/archive/2026-06-13-add-first-guest/`. Lesson: guest CRUD without cost field (PRD gap — FR-005 not yet implemented).
 - **S-02: View guest list with cost breakdown** — Archived 2026-06-13 → `context/changes/view-guest-list/`. Lesson: list view with aggregate counts (headcount, not costs).

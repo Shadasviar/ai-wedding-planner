@@ -1,10 +1,11 @@
 ---
 change_id: auth-scaffold
 topic: Scaffold authentication for Wedding Planner
-status: implemented
+status: archived
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-06-26
 roadmap_ref: F-01
+archived_at: 2026-06-26T10:11:44Z
 ---
 
 # Change: Auth Scaffold
