@@ -45,8 +45,8 @@ export default async function Home() {
           href="/timeline"
         />
         <DashboardCard
-          title="Finances"
-          emptyMessage="Total wedding cost so far"
+          title="Finanse"
+          emptyMessage="Łączny koszt wesela"
           ctaLabel="Zarządzaj finansami"
           href="/finances"
           totalCost={breakdown.total}
