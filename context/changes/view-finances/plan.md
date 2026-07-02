@@ -216,23 +216,23 @@ Test integracyjny weryfikujący poprawność agregacji kosztów (Risk #2 z test-
 
 #### Automated
 
-- [x] 3.1 `src/app/finances/page.tsx` istnieje
-- [x] 3.2 Strona renderuje się bez błędów (brak 500)
-- [x] 3.3 DashboardCard na stronie głównej pokazuje rzeczywistą sumę
+- [x] 3.1 `src/app/finances/page.tsx` istnieje — 532b814
+- [x] 3.2 Strona renderuje się bez błędów (brak 500) — 532b814
+- [x] 3.3 DashboardCard na stronie głównej pokazuje rzeczywistą sumę — 532b814
 
 #### Manual
 
-- [x] 3.4 Widok poprawny: suma całkowita + breakdown na 3 kategorie
-- [x] 3.5 Empty state widoczny dla pustej bazy
+- [x] 3.4 Widok poprawny: suma całkowita + breakdown na 3 kategorie — 532b814
+- [x] 3.5 Empty state widoczny dla pustej bazy — 532b814
 
 ### Phase 4: Testy
 
 #### Automated
 
-- [ ] 4.1 `src/app/api/finances/route.test.ts` istnieje
-- [ ] 4.2 Testy przechodzą: `npm run test`
-- [ ] 4.3 Test pokrywa Risk #2 (agregacja)
+- [x] 4.1 `src/app/api/finances/route.test.ts` istnieje
+- [x] 4.2 Testy przechodzą: `npm run test`
+- [x] 4.3 Test pokrywa Risk #2 (agregacja)
 
 #### Manual
 
-- [ ] 4.4 Uruchomić testy ręcznie i zweryfikować, że łapią błędy agregacji
+- [x] 4.4 Uruchomić testy ręcznie i zweryfikować, że łapią błędy agregacji
