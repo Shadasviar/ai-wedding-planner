@@ -193,24 +193,24 @@ Test integracyjny weryfikujący poprawność agregacji kosztów (Risk #2 z test-
 
 #### Automated
 
-- [x] 1.1 `src/lib/db/finances.ts` istnieje i eksportuje 4 funkcje
-- [x] 1.2 TypeScript typecheck przechodzi: `npm run typecheck`
+- [x] 1.1 `src/lib/db/finances.ts` istnieje i eksportuje 4 funkcje — fee3ac0
+- [x] 1.2 TypeScript typecheck przechodzi: `npm run typecheck` — fee3ac0
 
 #### Manual
 
-- [x] 1.3 Funkcje zwracają poprawne wyniki na testowych danych
+- [x] 1.3 Funkcje zwracają poprawne wyniki na testowych danych — fee3ac0
 
 ### Phase 2: API endpoint
 
 #### Automated
 
-- [ ] 2.1 `src/app/api/finances/route.ts` istnieje
-- [ ] 2.2 GET zwraca 200 z poprawnym kształtem odpowiedzi
-- [ ] 2.3 GET bez sesji zwraca 401
+- [x] 2.1 `src/app/api/finances/route.ts` istnieje
+- [x] 2.2 GET zwraca 200 z poprawnym kształtem odpowiedzi
+- [x] 2.3 GET bez sesji zwraca 401
 
 #### Manual
 
-- [ ] 2.4 API zwraca poprawne sumy dla testowych danych
+- [x] 2.4 API zwraca poprawne sumy dla testowych danych
 
 ### Phase 3: Strona /finances
 
