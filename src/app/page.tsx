@@ -5,6 +5,7 @@ import { GuestsDashboardCard } from "@/components/guests-dashboard-card"
 import { ServicesDashboardCard } from "@/components/services-dashboard-card"
 import { CateringDashboardCard } from "@/components/catering-dashboard-card"
 import { DashboardCard } from "@/components/dashboard-card"
+import { getFinancesBreakdown } from "@/lib/db/finances"
 
 export default async function Home() {
   const session = await auth()
@@ -12,6 +13,8 @@ export default async function Home() {
   if (!session) {
     redirect("/login")
   }
+
+  const breakdown = await getFinancesBreakdown()
 
   return (
     <div className="min-h-full flex flex-col p-8">
@@ -44,8 +47,9 @@ export default async function Home() {
         <DashboardCard
           title="Finances"
           emptyMessage="Total wedding cost so far"
-          ctaLabel="$0.00"
+          ctaLabel="Zarządzaj finansami"
           href="/finances"
+          totalCost={breakdown.total}
         />
       </div>
     </div>

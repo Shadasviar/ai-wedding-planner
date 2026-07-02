@@ -204,26 +204,26 @@ Test integracyjny weryfikujący poprawność agregacji kosztów (Risk #2 z test-
 
 #### Automated
 
-- [x] 2.1 `src/app/api/finances/route.ts` istnieje
-- [x] 2.2 GET zwraca 200 z poprawnym kształtem odpowiedzi
-- [x] 2.3 GET bez sesji zwraca 401
+- [x] 2.1 `src/app/api/finances/route.ts` istnieje — 5815dda
+- [x] 2.2 GET zwraca 200 z poprawnym kształtem odpowiedzi — 5815dda
+- [x] 2.3 GET bez sesji zwraca 401 — 5815dda
 
 #### Manual
 
-- [x] 2.4 API zwraca poprawne sumy dla testowych danych
+- [x] 2.4 API zwraca poprawne sumy dla testowych danych — 5815dda
 
 ### Phase 3: Strona /finances
 
 #### Automated
 
-- [ ] 3.1 `src/app/finances/page.tsx` istnieje
-- [ ] 3.2 Strona renderuje się bez błędów (brak 500)
-- [ ] 3.3 DashboardCard na stronie głównej pokazuje rzeczywistą sumę
+- [x] 3.1 `src/app/finances/page.tsx` istnieje
+- [x] 3.2 Strona renderuje się bez błędów (brak 500)
+- [x] 3.3 DashboardCard na stronie głównej pokazuje rzeczywistą sumę
 
 #### Manual
 
-- [ ] 3.4 Widok poprawny: suma całkowita + breakdown na 3 kategorie
-- [ ] 3.5 Empty state widoczny dla pustej bazy
+- [x] 3.4 Widok poprawny: suma całkowita + breakdown na 3 kategorie
+- [x] 3.5 Empty state widoczny dla pustej bazy
 
 ### Phase 4: Testy
 
