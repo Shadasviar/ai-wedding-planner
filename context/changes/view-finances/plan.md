@@ -229,10 +229,10 @@ Test integracyjny weryfikujący poprawność agregacji kosztów (Risk #2 z test-
 
 #### Automated
 
-- [x] 4.1 `src/app/api/finances/route.test.ts` istnieje
-- [x] 4.2 Testy przechodzą: `npm run test`
-- [x] 4.3 Test pokrywa Risk #2 (agregacja)
+- [x] 4.1 `src/app/api/finances/route.test.ts` istnieje — acc813c
+- [x] 4.2 Testy przechodzą: `npm run test` — acc813c
+- [x] 4.3 Test pokrywa Risk #2 (agregacja) — acc813c
 
 #### Manual
 
-- [x] 4.4 Uruchomić testy ręcznie i zweryfikować, że łapią błędy agregacji
+- [x] 4.4 Uruchomić testy ręcznie i zweryfikować, że łapią błędy agregacji — acc813c
