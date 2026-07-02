@@ -6,6 +6,13 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     testTimeout: 5000,
+    // Run tests sequentially to avoid SQLite database lock issues
+    pool: 'forks',
+    poolOptions: {
+      forks: {
+        singleFork: true,
+      },
+    },
   },
   resolve: {
     alias: {
